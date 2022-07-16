@@ -38,7 +38,7 @@
         <table class="table table-dark table-striped">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
+                    <th scope="col"></th>
                     <th scope="col">Title</th>
                     <th scope="col">Description</th>
                     <th scope="col">Delete</th>
@@ -47,7 +47,7 @@
             <tbody>
                 {% for todo in id %}
                 <tr>
-                    <th scope="row">{{ todo.id}}</th>
+                    <th><a href="{% url 'update' todo.id%}"><button type="button" class="btn btn-warning">Edit</button></a></th>
                     <td>{{ todo.title}}</td>
                     <td>{{ todo.content}}</td>
                     <td><a href="{% url 'delete' todo.id%}"><button type="button"  class="btn-close btn-close-white" aria-label="Close"></button></a></td>

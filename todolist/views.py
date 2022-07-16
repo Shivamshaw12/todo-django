@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponse
+
 from todolist.models import todos
 
 # Create your views here.
@@ -23,3 +24,20 @@ def delete(request,id):
     return redirect('/')
 
 
+def update(request,id):
+    context={'id':id}
+    if request.method=='POST':
+        record = todos.objects.get(id = id)
+        title=request.POST.get('title')
+        description=request.POST.get('description')
+        record.title=title
+        record.content=description
+        record.save()
+        return redirect('/')
+    return render(request,'update.html',context)
+
+
+
+
+    
+    
