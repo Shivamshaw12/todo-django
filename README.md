@@ -6,6 +6,6 @@
 3.run python manage.py migrate  
 4.run python manaeg.py runserver  
 
-live project - http://shivam12.pythonanywhere.com/
+live project - http://todoappdjango.pythonanywhere.com/
 
 
