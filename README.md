@@ -6,6 +6,5 @@
 3.run python manage.py migrate  
 4.run python manaeg.py runserver  
 
-live project - http://todoappdjango.pythonanywhere.com/
-
-
+live project - 
+https://todotask-app1.herokuapp.com/
